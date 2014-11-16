@@ -7,14 +7,18 @@ page = ~
 url,endops = get_next_target(page)
 print url
 
-page = page[endops]
+page = page[endops]owari
 url,endops = get_next_target(page)
 print url
 続く
 これでNoneが帰ってきたら終わり
 """
+def getAllLink(pages):
+	start_link = pages 
 
 
+
+"""
 def get_next_target(page):
 	start_link = page.find('<a href=')
 	if(start_link==-1):
