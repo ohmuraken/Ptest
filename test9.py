@@ -29,6 +29,8 @@ def get_all_links(page):
 			break
 
 #page = '<a href="result1">link1</a><a href="result2">link2</a><a href="result3">link3</a>'
+print get_page('https://camph.net')
+print ("==================")
 print get_all_links(get_page('https://camph.net'))
 
 #get_all_links(page)
