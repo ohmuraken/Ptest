@@ -11,28 +11,29 @@ def get_page(url):
 	    return "IOerror"
 
 
-def get_next_target(page):
-	start_link = page.find('<a href=')
+def get_next_target(page, startpos):
+	start_link = page.find('<a href=', startpos)
 	if start_link == -1:
 		return None, 0;
 	
-	start_quote = page.find('"',start_link)
-	end_quote = page.find('"',start_quote+1)
+	start_quote = page.find('"', start_link)
+	end_quote = page.find('"', start_quote+1)
 	url = page[start_quote+1:end_quote]
 	return url, end_quote 
 
 
 def print_all_links(basic_url, page):
 	print basic_url
+	startpos = 0
 	while 1:
 		##returnでふたつ返す
-		url, endpos = get_next_target(page)
+		url, startpos = get_next_target(page, startpos)
 		
 		if url is None:
 			break
 
 		print urljoin(basic_url, url)
-		page = page[endpos:]
+		#page = page[endpos:]
 		#メモリをコピーではなく切り取りをかえる
 
 
