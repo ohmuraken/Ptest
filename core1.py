@@ -36,12 +36,8 @@ def print_all_links(basic_url, page):
 		#page = page[endpos:]
 		#メモリをコピーではなく切り取りをかえる
 
-
-#page = '<a href="result1">link1</a><a href="result2">link2</a><a href="result3">link3</a>'
 url = 'https://camph.net'
 html = get_page(url)
 print html
 print ("==================")
 print_all_links(url, html)
-
-#get_all_links(page)

@@ -4,9 +4,6 @@
 #	second = setach.find(target_string,first+1)
 #	return second
 
-
-
-# def is
 def isfriend(name):
 	return name[0] == "D" or name[0] == "N"
 
@@ -19,12 +16,8 @@ print True or False
 print False or True
 print True or True
 print False or False
-
 print True or thisError
 print False or thisError
-
-
-
 
 def bigger(a,b):
 	if a>b:
