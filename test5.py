@@ -1,14 +1,41 @@
-#coding: UTF-8
+page = web contents
 """
-あ
-#coding: UTF-8
-で文字指定しないとおこ
+start_link = page.find("<a href=")
+start_quote = page.find('"',start_link)
+end_quote = pages.find('"',start_link+1)
+url = pages[start_link+1:end_quote]
+print url
 """
-def factorial(n):
-	all = 1
-	while n >=1:
-		all = all*n
-		n = n-1
-	return all
-	
-print factorial(4)
+def get_next_target(page):
+	start_link = page.find('<a href=')
+	start_quote = page.find('"',start_link)
+	end_quote = page.find('"',start_quote+1)
+	url = pages[start_quote+1:end_quote]
+	return url, end_quote
+
+url, end_quote = get_next_target(page)
+
+
+#a,b = 1,2
+"""
+
+>>> t=1
+>>> s=2
+>>> t,s=s,t
+>>> t
+2
+>>> s
+1
+
+
+>>> t=1
+>>> s=2
+>>> t=s
+>>> s=t
+>>> t
+2
+>>> s
+2
+>>>
+"""
+

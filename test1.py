@@ -1,27 +1,36 @@
-page = centents of the web page
+# search_string上にある2つ目のtaret_stringの位置を出力
+#def find_second(search_string,target_string):
+#	first = search_string.find("target_string")
+#	second = setach.find(target_string,first+1)
+#	return second
 
-star_link = page.find("<a href=")
-start_quote = find('"',start_quote)
-end_qupte = find('"',start_quote+1)
-url =  page.[start_quote+1:end_qupte]
-print url
+def isfriend(name):
+	return name[0] == "D" or name[0] == "N"
 
-page = page[end_qupte:]
+print isfriend("David")
+print isfriend("Tom")
+print isfriend("Nancy")
 
-def geturl();
+#True or　は前をみて、False orは後ろをみる
+print True or False
+print False or True
+print True or True
+print False or False
+print True or thisError
+print False or thisError
 
-url geturl();
+def bigger(a,b):
+	if a>b:
+		r = a
+	else:
+		r =	b
+	return r
 
-def get_next_target(s) {
+def biggest(a,b,c):
+	return bigger(a,bigger(b,c))
 
-	star_link = s.find("<a href=")
-	start_quote = find('"'.start_quote)
-	end_qupte = find('"'.start_quote+1)
-	url =  s.[start_quote+1:end_qupte]
+print biggest(1,2,3)
+	
 
-	retunr url, end_qupte
-}
 
-出力
-url end_qupte
 
